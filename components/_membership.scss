@@ -1,0 +1,120 @@
+.l-membership {
+    @include section;
+
+    &__lang {
+        @include container;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        @include media(sm) {
+          justify-content: center;
+        }
+
+        //language toggle styles
+        .switch {
+          -webkit-tap-highlight-color: transparent;
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+          }
+          
+          .switch input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+          }
+
+          .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $brand-color-light;
+            -webkit-transition: .4s;
+            transition: .4s;
+          }
+          
+          .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+          }
+        
+          input:checked + .slider {
+            background-color: $brand-color-light;
+          }
+          
+          input:focus + .slider {
+            box-shadow: 0 0 1px $brand-color-light;
+          }
+          
+          input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+          }
+          
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    }
+
+    &__container {
+        @include container;
+        overflow: hidden !important;
+        max-height: 430px;
+        display: flex;
+        padding: 3rem;
+        // border: 0px solid $dark;
+        border-radius: 10px;
+        // box-shadow: 10px 10px 26px -20px rgba(0,0,0,0.75);
+        // box-shadow: 10px 10px 25px -16px rgba(0,0,0,0.75);
+        // box-shadow: 3px 2px 25px -4px rgba(0,0,0,0.75);
+        box-shadow: 3px 2px 14px -5px rgba(0,0,0,0.75);
+
+        @include media(sm) {
+          display: block;
+          height: auto;
+          max-height: initial;
+        }
+    }
+
+
+    //switcher classes
+    .finnish-lang.hide,  .english-lang.hide {
+        display: none;
+    }
+
+
+    &__form-section {
+      @include container;
+
+      h4 {
+        margin-top: 4rem;
+      }
+
+      a {
+        font-size: 2.4rem;
+        cursor: pointer;
+      }
+    }
+}
+

@@ -1,0 +1,38 @@
+.c-btn {
+    @include anim;
+    padding: 1rem 1.2rem;
+    color: $white !important;
+    background-color: $brand-color;
+    border: 1px solid $white;
+    border-radius: $border-radius;
+
+    &:hover:before {
+        width: 0px !important;
+    }
+
+
+    &:hover {
+        background-color: $white;
+        color: $brand-color !important;
+    }
+
+
+    &--secondary {
+        transition: all 200ms ease-out !important;
+        padding: 1rem 1.2rem;
+        color: $brand-color!important;
+        background-color: $white;
+        border: 1px solid $brand-color;
+        border-radius: $border-radius;
+        text-decoration: none;
+
+        &:before {
+            content: "";
+            width: 0 !important;
+        }
+
+        &:hover {
+            transform: scale(.85);
+        }
+    }
+}

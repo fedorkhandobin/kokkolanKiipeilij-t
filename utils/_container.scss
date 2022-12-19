@@ -1,0 +1,9 @@
+@mixin container {
+    margin-inline: auto;
+    max-width: 1400px;
+    width: 90%;
+
+    @include media(sm) {
+    	width: calc(100% - 40px);
+    }
+}

@@ -1,0 +1,51 @@
+.l-contact {
+    @include section;
+
+
+    &__container {
+        @include container;
+    }
+
+    &__items {
+        display: flex;
+        gap: 6rem;
+        justify-content: space-around;
+
+        @include media(sm) {
+            flex-direction: column;
+        }
+    }
+
+    iframe {
+        width: 50%;
+        border-radius: 6px;
+        height: auto;
+        max-height: 500px;
+
+        @include media(sm) {
+            width: 100%;
+            aspect-ratio: 1/.7;
+        }
+    }
+
+    &__contact-info {
+        width: 50%;
+        color: $white;
+
+        h4, p {
+            color: $white;
+        }
+
+        h4 {
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            padding: 1.6rem;
+        }
+
+        @include media(sm) {
+            width: 100%;
+        }
+    }
+}

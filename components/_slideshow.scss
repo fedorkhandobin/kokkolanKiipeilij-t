@@ -1,0 +1,57 @@
+@import "../utils/import";
+
+
+.l-slideshow {
+    @include section;
+    padding-top: 0 !important;
+    
+    &__container {
+        @include container;
+    }
+
+
+    &__slide {
+        opacity: .3;
+        margin-right: 2000px;
+        width: 100%;
+        padding: 0 10rem;
+        // margin-inline: auto;
+
+        @include media(sm) {
+            padding: 0;
+            width: 90%;
+            margin-right: 20px;
+        }
+
+        img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: $border-radius;
+        }
+    }
+
+    &__slide.is-selected {
+        opacity: 1;
+    }
+
+
+    .flickity-viewport {
+        // min-height: 430px;
+        overflow: visible;
+    }
+
+    .flickity-page-dots {
+        transform: translateY(20px);
+    }
+
+    .dot.is-selected {
+        background-color: $white; 
+    }
+
+    .dot {
+        padding-bottom: 0 !important;
+        background-color: rgb(171, 170, 170) !important;
+    }
+
+}

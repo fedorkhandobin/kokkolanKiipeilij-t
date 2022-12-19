@@ -1,0 +1,53 @@
+.l-team {
+    @include section;
+    // padding-top: 2rem !important;
+
+    &__container  {
+        @include container;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6rem;
+
+        // @include media(sm) {
+        //     gap: 7rem;
+        // }
+    }
+}
+
+
+.c-team {
+    img {
+        max-width: 350px;
+        border-radius: $border-radius;
+    }
+    
+    p, h5{
+        color: $white;
+    }
+
+    h5.name {
+        font-size: 24px;
+    }
+
+    p.title {
+        font-size: 20px;
+        margin-bottom: 2px;
+    }
+
+    a.email {
+        font-size: 18px;
+        text-decoration: underline;
+        margin-top: 2px;
+        color: $white;
+
+        &:hover {
+            color: $brand-color;
+        }
+    }
+
+
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KokkolanKiipeilijät</title>
+    <link rel="stylesheet" href="./dist/css/module.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="./assets/logo.jpeg">
+    <!-- Flickity -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- Language switcher -->
+</head>
+<body>
+<main>
+    <!-- HEADER -->
+    <header id="site-header" class="l-header">
+        <div class="l-header__container">
+        <a href="/">
+            <div class="l-header__logo">
+                <img src="./assets/logo.jpeg" alt="logo">
+            </div>
+        </a>
+        <nav data-nav class="l-header__nav">
+            <a data-nav-link href="#a-history">Historiamme</a>
+            <a data-nav-link href="#a-membership">Jseuratoiminta </a>
+            <a data-nav-link href="#a-faq">UKK/FAQ</a>
+            <a data-nav-link href="#a-team">Tiimi</a>
+            <a data-nav-link data-modal-btn class="c-btn--secondary" href="#">Jäsenyys</a>
+        </nav>
+        <div data-burger-menu class="l-header__burger-menu"></div>
+        </div>
+    </header>
+    <div data-mobile-container class="l-header__mobile-container hide"></div>
+
+    <!-- TITLE -->
+    <h1>Uuden sukupolven kiipeilyä Kokkolan alueella</h1>
+
+
+    <!-- SLIDER -->
+    <section class="l-slideshow">
+        <div class="l-slideshow__container">
+            <div class="l-slideshow__slide"><img src="./assets/slider/climb-1.webp" alt=""></div>
+            <!-- <div class="l-slideshow__slide"><img src="./assets/slider/climb-2.webp" alt=""></div> -->
+            <div class="l-slideshow__slide"><img src="./assets/slider/climb-3.jpeg" alt=""></div>
+            <div class="l-slideshow__slide"><img src="./assets/slider/climb-4.jpeg" alt=""></div>
+        </div>
+    </section>
+
+    <h3 id="a-history">Pieni historiamme</h3>
+
+    <!-- TIMELINE -->
+    <section class="l-timeline">
+        <div class="l-timeline__container">
+            <div class="l-timeline__card left-slide">
+                <div class="l-timeline__content left-border">
+                <p class="year">2020</p>
+                <p>Seuran idea syntyi vuonna 2020 kun kolme jätkää aloittivat yhtäaikaa käydä kiipeilemässä Kokkolan urheilutalon seinällä ja päättivät että tästä tulee niiden harrastus. </p>
+                </div>
+            </div>
+            <div class="l-timeline__card right-slide">
+                <div class="l-timeline__content right-border">
+                <p class="year">2021</p>
+                <p>Vuonna 2021 kypsyi käsitys että eteenpäin vie vain rohkeat tavoitteet ja järjestetty toiminta ja loppuvuonna seura perustettiin.</p>
+                </div>
+            </div>
+            <div class="l-timeline__card left-slide">
+                <div class="l-timeline__content left-border">
+                <p class="year">2022</p>
+                <p>Tällä hetkellä tähtäillään kahden vuoden rajoissa kehittää kiipeilytoimintaa Kokkolan Urheilutalossa ja samalla osallistua Kokkolan Urheilupuiston projektin sunnitteluun varmistakseen että alueen kiipeilyllä on loistava tulevaisuus.</p>
+                </div>
+            </div>
+            <!-- <div class="l-timeline__card right-slide">
+                <div class="l-timeline__content right-border">
+                <h2>2012</h2>
+                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+
+
+    <h3  id="a-membership" class="bg-white">Jäsenyys ja seuratoiminta</h3>
+
+
+    <!-- MEMBESHIP - LANGUAGE -->
+    <section class="l-membership bg-white">
+        <div class="l-membership__lang">
+            <p>English</p>
+            <label class="switch">
+                <input data-lang-input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Suomi</p>
+        </div>
+        <!-- finnish verison -->
+        <div class="l-membership__container">
+            <div class="finnish-lang">
+                <p>Yhdistyksen tarkoituksena on edistää kiipeilyä ja levittää kiipeilyn harrastusta, 
+                    kohottaa jäsentensä fyysistä kuntoa ja terveyttä sekä herättää 
+                    heissä oikeaa urheiluhenkeä ja pysyvää harrastusta kiipeilyyn. Kokkolan Kiipeilijät 
+                    y on Suomen Kiipeilyliiton jäsenseura.
+                </p>
+                <p>Tulee osallistumaan meidän aktiviteetteihin ja tukemaan meidän toimintaa! </p>
+                <p>Voit liittyä varsinaiseksi jäseneksi tai kannattajajäseneksi:</p>
+                <ol>
+                    <li>Lue yhdistyksen <a href="https://drive.google.com/file/d/1-Vgu8DBU-2y1GiYtaHiPHGO3pu1nx25h/view">säännöt</a> ja <a href="https://docs.google.com/document/d/1nuvInAatDDC3IFxZzsi22ZQveuZsynPD/edit">erilliset säännökset.</a></li>
+                    <li>Varsinaiset jäsenet nauttivat SKIL ry:n tarjoamista <a href="https://www.climbing.fi/content/j%C3%A4senedut-seuroille">jäseneduista.</a></li>
+                    <li>Täytä jäsenyysilmoitus ja suorita jäsenyysmaksu.</li>
+                </ol>
+                <p>SKIL ry rekisterin tuoteseloste (GDPR) löytyy <a href="https://www.climbing.fi/content/materiaalipankki">materiaalipankkista.</a></p>
+            </div>
+            <div class="english-lang">
+                <p>  Our organization is created to promote climbing and spread the ideas of climbing, improve its' members physique and health and awake the spirit of sport in them for continuing practicing climbing. Kokkolan Kiipeilijät is a member organisation in Finnish Climbing Association.
+                </p>
+                <p>Join us in our activities and support us! </p>
+                <p>You can join as either full member or supporting member:</p>
+                <ol>
+                    <li>Read organisation's <a href="https://drive.google.com/file/d/1-Vgu8DBU-2y1GiYtaHiPHGO3pu1nx25h/view">constitution (FIN)</a> and <a href="https://docs.google.com/document/d/1nuvInAatDDC3IFxZzsi22ZQveuZsynPD/edit">eadditional rules (FIN).</a></li>
+                    <li>Full membership automatically means Finnish Climbing Association membership, check the<a href="https://www.climbing.fi/content/j%C3%A4senedut-seuroille">benefits</a>it brings</li>
+                    <li>Fill in and send the membership notification form. Complete enrollment by paying the membership fee.</li>
+                </ol>
+                <p>The Finnish Climbing Association membership register GDPR-policy can be found in the<a href="https://www.climbing.fi/content/materiaalipankki">organisation pages</a>(in Finnish).</p>
+            </div>
+        </div>
+        <div class="l-membership__form-section">
+            <h4>Kiinnostuitko? Täytä <a href="javascript:;" data-modal-btn>lomake</a> ja liity jäseneksi! </h4>
+        </div>
+    </section>
+
+    <div data-modal class="l-modal">
+        <div style="position: relative">
+        <div data-close-btn-modal class="l-modal__close-btn"></div>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdiuO3un9YZUcUyMeF_ijSFbdOBUWTr7YeNM5bYtQU8SrtRig/viewform" frameborder="0"></iframe>
+        </div>
+    </div>
+
+
+
+    <h3 id="a-faq" class="bg-white">UKK / FAQ</h3>
+
+
+
+    <!-- ACCORDION -->
+    <section class="l-accordion">
+        <div class="l-accordion__container">
+            
+        <div class="l-accordion__items">
+                <div data-card class="c-accordion">
+                    <div class="c-accordion__label" data-scheme-target>
+                        <p class="large">Miksi liittyisin?</p>
+                        <div data-btn class="c-accordion__label__icon"></div>
+                    </div>
+                    <div class="c-accordion__content">
+                        <p>On monta syytä liittyä sekä olla liittymättä, sinä tietenkin valitset sinulle sopivia. Ensiksi liittymällä osoitat itsellesi ja muille että kiipeily onkin tärkeä juuri sinulle. Tämä näkyy sekä kunnallisesti että koko liiton tasolla. Liitosta puheen olleen, Suomen Kiipeilyliitto tue  valtakunnalloisesti kiipeilyä monilla tavalla. Paikallisesti me järjestämme vuoden aikana eri aktiviteetteja kuten kiipeilyreissuja ja osoittamasi tuki on paras motivointi tässä toiminnassa.</p>
+                    </div>
+                </div>
+                <div data-card class="c-accordion">
+                    <div class="c-accordion__label" data-scheme-target>
+                        <p class="large">Mikä on täysjäsenyyden etu?</p>
+                        <div data-btn class="c-accordion__label__icon"></div>
+                    </div>
+                    <div class="c-accordion__content">
+                        <p>Kokkolan Kiipeilijät ry täysjäsen on automaattisesti myös SKIL jäsen, mikä tarkoittaa muun muuassa vakuutusta joka kattaa kiipeilyyn liittyvät tapaturmat.</p>
+                    </div>
+                </div>
+                <div data-card class="c-accordion">
+                    <div class="c-accordion__label" data-scheme-target>
+                        <p class="large">Opetusta, kursseja, vinkkejä alkuun?</p>
+                        <div data-btn class="c-accordion__label__icon"></div>
+                    </div>
+                    <div class="c-accordion__content">
+                        <p>Helpoiten lajiin tutustuu sisätiloissa kiipeilemällä lyhyitä reitteja, tätä kutsutaan boulderoinniksi. Myös ilman aiempaa kokemusta kokeneen varmistajan parissa kiipeilyä voi kokeilla kiipeilyseinällä joka löytyy monista paikoista, lähin Kokkolan Urheilutalossa. Mikäli into herää meiltä saa vinkkeja kiipeilyyn ja opetusta olisi tarjolla sekä paikallisesti että valtakunnalisesti.</p>
+                    </div>
+                </div>
+                <div data-card class="c-accordion">
+                    <div class="c-accordion__label" data-scheme-target>
+                        <p class="large">Ei minusta ole kiipeilyyn...</p>
+                        <div data-btn class="c-accordion__label__icon"></div>
+                    </div>
+                    <div class="c-accordion__content">
+                        <p>Liikunnan ilo ja hyödyt kuuluvat kaikille ja kiipeily lajina on sekä hyvin rento että moniulotteinen. Tule ja kokeile =)</p>
+                    </div>
+                </div>
+                <div data-card class="c-accordion">
+                    <div class="c-accordion__label" data-scheme-target>
+                        <p class="large">Onko kiipeily kallis harrastus?</p>
+                        <div data-btn class="c-accordion__label__icon"></div>
+                    </div>
+                    <div class="c-accordion__content">
+                        <p>Alkuun pääsee pienilla maksuilla (vuokravälineet yms.), jatkossa alalajista riippuen siihen voi käyttää sopivan suuruisia summia, mutta yleensä sadalla eurolla pääsee pitkälle.</p>
+                    </div>
+                </div>
+                <div data-card class="c-accordion">
+                    <div class="c-accordion__label" data-scheme-target>
+                        <p class="large">Kuinka kiipeilyn riskit hallitaan?</p>
+                        <div data-btn class="c-accordion__label__icon"></div>
+                    </div>
+                    <div class="c-accordion__content">
+                        <p>Edellämainittu vakuutus on tietenkin viimeinen apu, mutta riskit otetaan huomioon koulutuksissa, kiipeilyseinien ja välineiden tarkastuksissa jotta kaikki riskintekijät olisi hallinnassa.</p>
+                    </div>
+                </div>
+                <div data-card class="c-accordion">
+                    <div class="c-accordion__label" data-scheme-target>
+                        <p class="large">Mitä kiipeilyllä on tarjottavaa minulle?</p>
+                        <div data-btn class="c-accordion__label__icon"></div>
+                    </div>
+                    <div class="c-accordion__content">
+                        <p>Ihmiset kiipeilevät eri syistä ja ehkä sinä samaistut muutamaan allamainituista:</p>
+                        <ul>
+                            <li>kiipeily on sosiaalinen laji, on myös totta että yksi hyvä kanssaharrastaja riittää</li>
+                            <li>kiipeilyä voi harrastaa sekä sisätiloissa että luonnon kohdissa</li>
+                            <li>kiipeilyä voi katsoa pelkästään fyysisenä suorituksena ja kilpailuna</li>
+                            <li>kiipeilyä voi katsoa myös kehonhallinnan harjoittamisena, sisäisen lapsen vapauttamisena sekä henkisen sitkeyden harjoittamisena</li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+
+        </div>
+    </section>
+
+
+    <h3 id="a-team" style="color: white">Tapaa tiimi</h3>
+
+
+    <!-- TEAM -->
+    <section class="l-team">
+        <div class="l-team__container">
+            <div class="l-team__items">
+                <div class="c-team">
+                    <img src="./assets/team/niklas_lento.jpeg" alt="Niklas Lento">
+                    <h5 class="name">Niklas Lento</h5>
+                    <p class="title">Puheenjohtaja</p>
+                    <a class="email" href="mailto:nickylento@gmail.com">nickylento@gmail.com</a>
+                </div>
+                <div class="c-team">
+                    <img src="./assets/team/ilya_kondrasenko.jpeg" alt="Ilya Kondrasenko">
+                    <h5 class="name">Ilya Kondrasenko</h5>
+                    <p class="title">Varapuheenjohtaja</p>
+                    <a class="email" href="mailto:ilya.kondrasenko@gmail.com">ilya.kondrasenko@gmail.com</a>
+                </div>
+                <div class="c-team">
+                    <img src="./assets/team/jukka_oinonen.jpeg" alt="Jukka Oinonen">
+                    <h5 class="name">Jukka Oinonen</h5>
+                    <p class="title">Sihteeri</p>
+                    <a class="email" href="mailto:jukkaoinonen1991@gmail.com">jukkaoinonen1991@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <h3 id="a-contact" style="color: white">Lisätietoja</h3>
+
+    <!-- CONTACT -->
+    <section class="l-contact">
+        <div class="l-contact__container">
+            <div class="l-contact__items">
+            <iframe src="https://www.google.com/maps/d/embed?authuser=0&mid=1uzbAsE_czi8l_hoEkys4rH7WCITLoqEA" frameborder="0"></iframe>
+            <div class="l-contact__contact-info">
+                <h4>Urheilutalon aukioloajat keväällä 2022:</h4>
+                <ul>
+                    <li>ma-to 	  7.30-22.00 
+                        Kiipeilyvuoro ma klo 17.30-19.30
+                        (vaihtoehtoinen to klo 19.00-)</li>
+                    <li> 7.30-21.00</li>
+                    <li>9.00-17.00</li>
+                    <li>14.00-21.00</li>
+                </ul>
+                <p>Kiipeilyseinälle pääsee vain osaavan varmistajan kanssa. Varmistajan tulee todistaa oman taidon riittävyyttä urheilutalon henkilökunnalle ennen seinälle pääsyä.</p>
+                <p>Boulderointi ei vaadi aiempaa kokemusta. Boulderointiluolan patja takaa turvallisia pudotuksia peruskäytössä.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="l-footer">
+
+    </footer>
+</main>
+</body>
+</html>

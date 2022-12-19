@@ -1,0 +1,82 @@
+.l-accordion {
+
+    @include section;
+    background-color: $white;
+
+    &__container {
+        @include container;
+    }
+
+
+}
+
+
+.c-accordion {
+    border-top: 1px solid rgb(172, 171, 171);
+    padding: 2rem 0; //change later
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    &:last-child {
+        border-bottom: 1px solid rgb(172, 171, 171);
+    }
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        align-items: center;
+        padding-right: 20px;
+
+
+        .large {
+            font-size: 24px;
+        }
+
+        &__icon {
+            width: 20px;
+            height: 20px;
+            transition: .1s;
+            background-image: url('https://25504338.fs1.hubspotusercontent-eu1.net/hubfs/25504338/Hofstede/Icons/Accordion%20module/plus.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    }
+
+
+    &__content {
+        transition: max-height .4s;
+        max-height: 0px;
+        overflow-y: hidden;
+        max-width: 1200px;
+
+        img {
+            margin-top: 2rem;
+            max-width: 300px;
+            height: auto;
+        }
+
+        ul {
+            padding: 1.8rem !important;
+        }
+
+        li {
+            font-size: 18px !important;
+        }
+
+        // li:not(:first-child) {
+        //     margin-top: 16px;
+        // }
+    }
+}
+
+//for toggle js
+.c-accordion__content.active {
+    height: auto;
+    max-height: 450px; //this is very FLUCTUATED value
+}
+
+.c-accordion__label__icon.minus {
+    background-image: url('https://25504338.fs1.hubspotusercontent-eu1.net/hubfs/25504338/Hofstede/Icons/Accordion%20module/minus.svg');
+}

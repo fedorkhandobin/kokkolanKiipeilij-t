@@ -1,0 +1,184 @@
+.l-timeline {
+    @include section;
+    // padding-top: 2rem !important;
+
+    &__container {
+        @include container;
+
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            z-index: -1;
+        }
+    }
+
+
+    &__card {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    
+        &:after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: $brand-color;
+            border: 4px solid $white;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    
+        &:not(:first-child) {
+            margin-top: 60px;
+        }
+    }
+
+    &__content {
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+
+        @include media(sm) {
+            min-width: 280px;
+            border-right: 5px solid $brand-color !important;
+        }
+
+        .year {
+            font-size: 28px;
+        }
+    }
+
+        .left-border {
+            border-left: 6px solid $brand-color;
+
+            @include media(sm) {
+                border-left: none;
+            }
+        }
+
+        .right-border {
+            border-right: 6px solid $brand-color;
+
+            @include media(sm) {
+                border-right: none;
+            }
+        }
+
+    /* Place the container to the left */
+    .left-slide {
+        left: 0;
+        //anim
+        // transform: translateX(-50%);
+
+        &:before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+    }
+
+    /* Place the container to the right */
+    .right-slide {
+        left: 50%;
+        //anim
+        // transform: translateX(50%);
+
+        &:before{
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        &:after {
+            left: -12px;
+        }
+    
+    }
+
+    //anim
+    .left-slide, .right-slide {
+        opacity: 0;
+        transition: 
+        opacity 250ms ease-in,
+        transform 450ms ease-in;
+    }
+
+    //anim
+    .left-slide.appear, .right-slide.appear {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+    .l-timeline__container {
+        width: 100% !important;
+    }
+
+    /* Place the timelime to the left */
+    .l-timeline__container::after {
+    left: 31px !important;
+    }
+    
+    /* Full-width containers */
+    .l-timeline__card {
+    width: 100% !important;
+    padding-left: 70px !important;
+    // padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .l-timeline__card::before {
+    left: 60px !important;
+    border: medium solid white !important;
+    border-width: 10px 10px 10px 0 !important;
+    border-color: transparent white transparent transparent !important;
+    }
+
+    .l-timeline__content {
+        padding: 20px !important;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left-slide::after, .right-slide::after {
+    left: 18px !important;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right-slide {
+    left: 0% !important;
+    }
+  }
